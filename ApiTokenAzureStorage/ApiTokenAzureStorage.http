@@ -1,0 +1,6 @@
+@ApiTokenAzureStorage_HostAddress = http://localhost:5101
+
+GET {{ApiTokenAzureStorage_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
