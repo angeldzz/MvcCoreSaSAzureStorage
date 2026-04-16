@@ -15,6 +15,12 @@ var app = builder.Build();
 app.MapOpenApi();
 app.MapScalarApiReference();
 
+app.MapGet("/", context =>
+{
+    context.Response.Redirect("/scalar");
+    return Task.CompletedTask;
+});
+
 app.UseHttpsRedirection();
 
 //NECESIAMOS MAPEAR NUESTRO METODO TOKEN DENTRO DE UN ENDPOINT
